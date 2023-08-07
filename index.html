@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 0px;
+  background: #f1f1f1;
+  margin: 0;
+  
+}
+
+/* Header/Blog Title */
+header {
+  padding: 30px;
+}
+.centrado{
+  position: absolute;
+  top: 64%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+}
+
+header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+}
+
+/* Color al pasar el mouse */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+
+
+
+/*PRESENTACION DE DIAPOSITIVAS*/
+
+.mySlides {display: none}
+.diapositiva {
+  vertical-align: middle;
+  width: 100%;
+  height: 600px;
+  opacity: 0.4;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* Caption text */
+.text {
+  color: black;
+  font-size: 60px;
+  padding: 200px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+/*----------------------------*/
+
+
+/*----------CONTACTO-----------*/
+.contacto{
+  color: black;
+  font-family: cursive;
+  font-size: 30px;
+}
+.contacto:hover{
+  font-size: 35px;
+  color: gray;
+}
+/*-----------------------------*/
+
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: black;
+  margin-top: 20px;
+  color: white;
+}
+.regresar_inicio{
+  display:block;
+  color: black;
+  background-color: white;
+  width: 170px;
+  font-size: 20px;
+}
+.regresar_inicio:hover{
+  font-size: 25px;
+}
+/*-----------------------------*/
+
+</style>
+</head>
+<body>
+
+<header class="header" id="inicio">
+  <img src="Ingeniería Rat.png" alt="Log" height="500px" width="100%">
+  <div class="centrado">Robot Arregla Todo</div>
+</header>
+<!--Barra de navegacion-->
+<nav class="topnav">
+  <a href="#inicio">Inicio</a>
+  <a href="#servicios">Servivicios</a>
+  <a href="#nuestro_trabajo">Nuestro Trabajo</a>
+  <a href="#contacto" style="float:right">Contacto</a>
+</nav>
+<!---------------------->
+
+<!------PUBLICIDAD------>
+<section id="publicidad" style="padding: 128px 16px;">
+  <video src="Video Publicitario.mp4" autoplay width="100%" controls>No se pudo cargar el video</video>
+</section>
+
+<!---------------------->
+
+
+
+<!--SERVICIOS-->
+<section id="servicios" style="padding:60px 16px;">
+<!--Presentacion de diapositivas-->
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    
+    <img src="servicios-transformed.jpeg" class="diapositiva">
+    <div class="text">NUESTROS SERVICIOS</div>
+  </div>
+
+  <div class="mySlides fade">
+    
+    <img src="mantenimiento_computadora.jpg" class="diapositiva">
+    <div class="text">MANTENIMIENTO DE COMPUTADORAS</div>
+  </div>
+  
+  <div class="mySlides fade">
+   
+    <img src="renta y venta.jpg" class="diapositiva">
+    <div class="text">RENTA Y VENTA DE COMPUTADORAS</div>
+  </div>
+  
+  <div class="mySlides fade">
+    
+    <img src="IMPRESORA-transformed.png" class="diapositiva">
+    <div class="text">INSTALACION Y CONFIGURACION DE IMPRESORAS</div>
+  </div>
+  
+  <div class="mySlides fade">
+    
+    <img src="internet.jpeg" class="diapositiva">
+    <div class="text">CONFIGURACION DE REDES WI-FI</div>
+  </div>
+
+  <div class="mySlides fade">
+    
+    <img src="Paginas web.jpeg" class="diapositiva">
+    <div class="text">CREACION DE PAGINAS WEB</div>
+  </div>
+
+  <div class="mySlides fade">
+    
+    <img src="camara.jpeg" class="diapositiva">
+    <div class="text">VENTA, CONFIGURACION E INSTALACION DE CAMARAS DE SEGURIDAD</div>
+  </div>
+
+  <div class="mySlides fade">
+    
+    <img src="sistemas.jpeg" class="diapositiva">
+    <div class="text">ELABORACION DE SISTEMAS PARA NEGOCIOS</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  
+  </div>
+  <br>
+  
+  </div>  
+<!-------------------------------->
+</section>
+<!-------------------------------->
+
+<!--------NUETRO TRABAJO---------->
+<section id="nuestro_trabajo" style="padding: 80px 16px;">
+  <center>
+    <h1>NUESTRO TRABAJO</h1>
+    <iframe src="comparacion.html" frameborder="0" width="100%" height="600px" style="padding-left: 30px;"></iframe>
+  </center>
+</section>
+<!-------------------------------->
+
+
+
+
+
+<!------------CONTACTO------------>
+
+<section id="contacto" style="padding:128px 16px;">
+  <h1 style="text-align: center;">CONTACTO</h1>
+  <p style="text-align: center;">Mandanos un mensaje de WhatsApp y cotiza cualquiera de nuestros servcios sin ningun compromiso</p>
+  <center>
+  <table>
+    <tr>
+      <td>
+        <img src="icono_whatsapp-removebg-preview.png" alt="WhatsApp" width="100px" height="100px">
+      </td>
+      <td>
+        <a href="https://wa.me/7292875266?text=Quisiera%20cotizar%20uno%20de%20tus%20servicios..." target="_blank" class="contacto">7292875266</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img src="icono_whatsapp-removebg-preview.png" alt="WhatsApp" width="100px" height="100px">
+      </td>
+      <td>
+        <a href="https://wa.me/5527621114?text=Quisiera%20cotizar%20uno%20de%20tus%20servicios..." target="_blank" class="contacto">5527621114</a>
+      </td>
+    </tr>
+  </table>
+</center>
+  
+  
+  
+</section>
+
+<!-------------------------------->
+
+<footer>
+  <center><a href="#inicio" class="regresar_inicio">Volver a inicio</a></center>
+  <h6>Copyright © 2023 - Desarrollado Por Ingenieria Rat.</h6>
+</footer>
+
+
+
+<script>
+  //PRESERNTACION DE DIAPOSITIVAS
+  
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+  //------------------------------
+</script>
+
+</body>
+</html   
